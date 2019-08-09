@@ -11,8 +11,8 @@ rss:
 # Path or URL to the website's logo to be shown on the left of the navigation bar or footer
 #logo: /images/maotouying.svg
 logo:
-    text: i蝸居年華_谢谢谢
-    img: /images/maotouying.svg
+    text: Droid
+    img: /images/gujiaqi.jpg
 # Open Graph metadata
 # https://hexo.io/docs/helpers.html#open-graph
 open_graph:
@@ -52,7 +52,7 @@ footer:
             url: 'https://creativecommons.org/licenses/by/4.0/'
         Download on GitHub:
             icon: fab fa-github
-            url: 'https://github.com/thank037'
+            url: 'https://github.com/droid-Q'
 # Article display settings
 article:
     # Code highlight theme
@@ -73,14 +73,14 @@ search:
 	
 # Comment plugin settings
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Comment-Plugins
-comment:
+#comment:
     # Name of the comment plugin
-    type: valine
-    app_id: yVPV2fAKC1B90Xnh2JjuPEAb-gzGzoHsz        # (required) LeanCloud application id
-    app_key: 1i9DgF7j75Uq6OuM23etjjE9       # (required) LeanCloud application key
-    notify: false           # (optional) receive email notification
-    verify: false           # (optional) show verification code
-    placeholder: Just go go, 支持Markdown~   # (optional) comment box placeholder text	
+ #   type: valine
+ #   app_id: yVPV2fAKC1B90Xnh2JjuPEAb-gzGzoHsz        # (required) LeanCloud application id
+ #   app_key: 1i9DgF7j75Uq6OuM23etjjE9       # (required) LeanCloud application key
+ #   notify: false           # (optional) receive email notification
+ #   verify: false           # (optional) show verification code
+ #   placeholder: Just go go, 支持Markdown~   # (optional) comment box placeholder text	
 #     guest_info: nick,mail,link,zhangsan 
 #     pageSize: 10
 
@@ -91,12 +91,22 @@ donate:
 #        # Donation entry name
         type: alipay
         # Qrcode image URL
-        qrcode: '/images/no2.jpg'
+        qrcode: '/images/alipay.jpg'
     -
         # Donation entry name
         type: wechat
         # Qrcode image URL
-        qrcode: '/images/no.gif'
+        qrcode: '/images/wechat.jpg'
+    -
+        # Donation entry name
+        type: bitcoin
+        # Qrcode image URL
+        qrcode: '/images/bitcoin.jpg'
+    -
+        # Donation entry name
+        type: ethereum
+        # Qrcode image URL
+        qrcode: '/images/ethereum.jpg'
 #     -
 #         # Donation entry name
 #         type: paypal
@@ -138,24 +148,24 @@ widgets:
         # Where should the widget be placed, left or right
         position: left
         # Author name to be shown in the profile widget
-        author: i蝸居年華_谢谢谢
+        author: Droid
         # Title of the author to be shown in the profile widget
-        author_title: Just for fun
+        author_title: Programming Enthusiast
         # Author's current location to be shown in the profile widget
-        location:  Beijing, China
+        location:  Jiaxing, China
         # Path or URL to the avatar to be shown in the profile widget
-        avatar: /images/avatar.png
+        avatar: 
         # Email address for the Gravatar to be shown in the profile widget
-        gravatar:
+        gravatar: droidqw@gmail.com
         # Whether to show avatar image rounded or square
         avatar_rounded: false
         # Path or URL for the follow button
-        follow_link: 'https://github.com/thank037'
+        follow_link: 'https://github.com/droid-Q'
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
                 icon: fab fa-github
-                url: 'https://github.com/thank037'
+                url: 'https://github.com/droid-Q'
             Facebook:
                 icon: fab fa-facebook
                 url: 'http://facebook.com'
@@ -180,11 +190,12 @@ widgets:
         position: left
 
         # Links to be shown in the links widget
-        links:
-            朱双印个人日志: 'http://www.zsythink.net'
-            小鱼周凌宇: 'http://zhoulingyu.com'
-            陈敏: 'https://www.chenmin.info'
-            斑马のCODE_HOME: 'http://xunyajie.com/'
+        
+        #links:
+         #   朱双印个人日志: 'http://www.zsythink.net'
+          #  小鱼周凌宇: 'http://zhoulingyu.com'
+           # 陈敏: 'https://www.chenmin.info'
+            #斑马のCODE_HOME: 'http://xunyajie.com/'
     -
         # Widget name
         type: category

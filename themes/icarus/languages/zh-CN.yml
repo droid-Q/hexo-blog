@@ -29,6 +29,8 @@ donate:
     title: '坚持原创技术分享，您的支持将鼓励我继续创作！'
     alipay: '支付宝'
     wechat: '微信'
+    bitcoin: 'Bitcoin'
+    ethereum: 'Ethereum'
 plugin:
     backtotop: '回到顶端'
     visit: '%s次访问'
