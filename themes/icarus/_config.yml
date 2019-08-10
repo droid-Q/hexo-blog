@@ -245,7 +245,7 @@ plugins:
     # http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/site-analytics-plugin/#Baidu-Analytics
     baidu-analytics:
         # Baidu Analytics tracking id
-        tracking_id: b59777544dd5d59ce94e191bac62427c
+        tracking_id: 61bed0dcdf9bb8182f8fa9ed90a2beb2
     # Hotjar user feedback plugin
     # http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/site-analytics-plugin/#Hotjar
     hotjar:
