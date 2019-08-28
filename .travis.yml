@@ -17,8 +17,8 @@ script:
   - hexo clean
   - hexo g
 after_script:
-  - git config user.name "droid-Q"
-  - git config user.email "droidqw@gmail.com"
+  - git config --global user.name "droid-Q"
+  - git config --global user.email "droidqw@gmail.com"
   - git clone https://github.com/droid-Q/droid-Q.github.io.git .deploy_git
   - cd .deploy_git
   - git checkout master
