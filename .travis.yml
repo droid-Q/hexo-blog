@@ -1,7 +1,5 @@
-os:
-  - osx
-
 language: node_js
+sudo: required
 node_js: stable
 
 cache:
@@ -25,7 +23,7 @@ after_script:
   - cd .deploy_git
   - git checkout master
   - cd ../
-  - sed -i "s/ci_token/${CI_TOKEN}/g" ./_config.yml || exit 1
+  - sed -i "s/ci_token/${CI_TOKEN}/g" ./_config.yml
   - hexo deploy
 branches:
   only:
