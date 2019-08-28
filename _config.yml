@@ -79,5 +79,5 @@ theme: icarus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://ci_token@github.com:droid-Q/droid-Q.github.io.git
+  repo: https://ci_token@github.com/droid-Q/droid-Q.github.io.git
   branch: master
