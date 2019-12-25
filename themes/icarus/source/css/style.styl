@@ -23,7 +23,13 @@ body, button, input, select, textarea
     .is-2-column .container
         max-width: screen-desktop - 2 * gap
         width: screen-desktop - 2 * gap
+    .is-3-column .container
+        max-width: screen-widescreen - gap
+        width: screen-widescreen - gap
 @media screen and (min-width: screen-fullhd)
+    .is-3-column .container
+        max-width: screen-fullhd - 2 * gap
+        width: screen-fullhd - 2 * gap
     .is-2-column .container
         max-width: screen-widescreen - 2 * gap
         width: screen-widescreen - 2 * gap
@@ -75,7 +81,7 @@ img.thumbnail
 .navbar-logo,
 .footer-logo
     img
-        max-height: 1.75rem
+        max-height: 2.55rem
 
 .navbar-main
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05)
@@ -118,6 +124,7 @@ img.thumbnail
         .button
             background: transparent
 
+
 .widget
     .media
         border: none
@@ -127,8 +134,6 @@ img.thumbnail
         margin-right: 0
     .menu-list a.level
         display: flex
-    .has-text-centered figure.image
-        margin: auto
 
 .pagination
     .pagination-link:not(.is-current), .pagination-previous, .pagination-next
@@ -181,8 +186,6 @@ img.thumbnail
             max-width: 50%
             font-size: 1.15rem
             position: relative
-        a
-            word-wrap: break-word
 
 .rtl
      direction: rtl
@@ -339,16 +342,12 @@ img.thumbnail
     h5
         font-size: 1em
     code, pre
+        font-size: 0.85em
         font-family: family-mono
-    pre
-        font-size: 0.85em
     code
-        padding: 0
-        background: transparent
-    & > code,
-    :not(pre) > code
-        font-size: 0.85em
         color: hsl(348, 100%, 61%)
+        background: transparent
+        padding: 0
     blockquote
         footer
             strong + cite
@@ -362,9 +361,6 @@ figure.highlight
     width: 100%
     position: relative
     margin: 1em 0 1em !important
-    &.folded
-        .highlight-body
-            height: 0
 
     pre,
     table tr:hover
@@ -374,19 +370,11 @@ figure.highlight
     table
         width: auto
 
-        tr td
-                border: none
-        tr:not(:first-child) td
-            padding-top: 0
-        tr:not(:last-child) td
-            padding-bottom: 0
-
     pre
         padding: 0
         overflow: visible
 
-        .line,
-        code .hljs
+        .line
             line-height: 1.5rem
 
     figcaption,
@@ -398,29 +386,14 @@ figure.highlight
         text-align: left
         font-style: normal
         font-size: .8em
-        &:after
-            clear: both
-            content: " "
-            display: table
 
         span
             font-weight: 500
             font-family: family-mono
 
-        .fold
-        a
-            color: #9a9a9a
-
         a
             float: right
-            margin-left: 0.5em
-
-        .fold
-            margin-right: 0.5em
-            cursor: pointer
-
-    .highlight-body
-        overflow: auto
+            color: #9a9a9a
 
     .gutter
         text-align: right
@@ -440,30 +413,15 @@ figure.highlight
         min-width: inherit
         border-radius: inherit
 
-/* ---------------------------------
- *          Overflow Table
- * --------------------------------- */
-.table-overflow
-    overflow-x: auto
-    table
-        width: auto!important
-        th
-            word-break: keep-all
-
-/* ---------------------------------
- *            Fix Video
- * --------------------------------- */
-.video-container
-    position: relative
-    padding-bottom: 56.25%
-    padding-top: 25px
-    height: 0
-    iframe
+    .copy
+        display: none
         position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
+        bottom: 0
+        right: 0
+        color: white
+        background: rgba(0, 0, 0, 0.5)
+    &:hover .copy
+        display: block
 
 /* ---------------------------------
  *        Fix Gist Snippet
@@ -476,3 +434,50 @@ figure.highlight
             border: none
     .file
         all: initial
+
+
+
+// 顶部搜索栏的修改: Input框加搜索图表
+.box01 input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance:none ;
+    outline: 0;
+    width: 270px;
+    height: 30px;
+    border:0px solid #fff;
+    border-radius: 20px;
+    box-shadow:0 0 5px 2px rgba(0,0,0,0.1);
+    padding: 0 30px 0 15px;
+}
+.box01 label{
+    font-size: 16px;
+    z-index: 2;
+    position: absolute;
+    left: 109px;
+    top:15%;
+    color: #b2b2b2;
+}
+/*利用<i>来安放图标*/
+.search_icon{
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background-image: url(../images/search.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 40%;
+    left: 250px;
+    z-index: 2;
+}
+
+
+//文章详情页面加版权声明 updated by thank
+.post-copyright
+    font-size: 1rem
+    letter-spacing: 0.02rem
+    word-break: break-all
+    margin: 2.5rem 0 0
+    padding: 1rem 1rem
+    border-left: 3px solid #3273dc
+    background-color: #F9F9F9

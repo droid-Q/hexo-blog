@@ -2,7 +2,9 @@
 <% function side_column_class() {
     switch (column_count()) {
         case 2:
-            return 'is-4-tablet is-4-desktop is-4-widescreen';
+            // update by thank: 三栏变两栏
+            // return 'is-4-tablet is-4-desktop is-4-widescreen';
+            return 'is-4-tablet is-4-desktop is-3-widescreen'
         case 3:
             return 'is-4-tablet is-4-desktop is-3-widescreen';
     }
@@ -22,12 +24,12 @@
 } %>
 <div class="column <%= side_column_class() %> <%= visibility_class() %> <%= order_class() %> column-<%= position %> <%= sticky_class(position) %>">
     <% get_widgets(position).forEach(widget => {%>
-        <%- _partial('widget/' + widget.type, { widget }) %>
+        <%- partial('widget/' + widget.type, { widget, post: page }) %>
     <% }) %>
     <% if (position === 'left') { %>
         <div class="column-right-shadow is-hidden-widescreen <%= sticky_class('right') %>">
         <% get_widgets('right').forEach(widget => {%>
-            <%- _partial('widget/' + widget.type, { widget }) %>
+            <%- partial('widget/' + widget.type, { widget, post: page }) %>
         <% }) %>
         </div>
     <% } %>

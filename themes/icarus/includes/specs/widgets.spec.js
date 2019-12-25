@@ -10,23 +10,23 @@ const DEFAULT_WIDGETS = [
         avatar: null,
         gravatar: null,
         avatar_rounded: false,
-        follow_link: 'https://github.com/ppoffice',
+        follow_link: 'http://github.com/ppoffice',
         social_links: {
             Github: {
                 icon: 'fab fa-github',
-                url: 'https://github.com/ppoffice'
+                url: 'http://github.com/ppoffice'
             },
             Facebook: {
                 icon: 'fab fa-facebook',
-                url: 'https://facebook.com'
+                url: 'http://facebook.com'
             },
             Twitter: {
                 icon: 'fab fa-twitter',
-                url: 'https://twitter.com'
+                url: 'http://twitter.com'
             },
             Dribbble: {
                 icon: 'fab fa-dribbble',
-                url: 'https://dribbble.com'
+                url: 'http://dribbble.com'
             },
             RSS: {
                 icon: 'fas fa-rss',
@@ -125,23 +125,9 @@ const LinksSpec = {
     }
 };
 
-const SubscrbieEmailSpec = {
-    feedburner_id: {
-        [type]: 'string',
-        [doc]: 'Feedburner ID',
-        [required]: true,
-        [requires]: parent => parent.type === 'subscribe_email'
-    },
-    description: {
-        [type]: 'string',
-        [doc]: 'Hint text under the subscription input',
-        [requires]: parent => parent.type === 'subscribe_email'
-    }
-};
-
 module.exports = {
     [type]: 'array',
-    [doc]: 'Sidebar widget settings\nhttps://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/',
+    [doc]: 'Sidebar widget settings\nhttp://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/',
     [defaultValue]: DEFAULT_WIDGETS,
     '*': {
         [type]: 'object',
@@ -160,7 +146,6 @@ module.exports = {
             [defaultValue]: 'left'
         },
         ...ProfileSpec,
-        ...LinksSpec,
-        ...SubscrbieEmailSpec
+        ...LinksSpec
     }
 }

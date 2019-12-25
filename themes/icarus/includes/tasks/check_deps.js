@@ -18,6 +18,13 @@ const missingDeps = [
     'hexo-util',
     'hexo-log',
     'hexo-pagination',
+    'hexo-generator-archive',
+    'hexo-generator-category',
+    'hexo-generator-index',
+    'hexo-generator-tag',
+    'hexo-renderer-ejs',
+    'hexo-renderer-marked',
+    'hexo-renderer-stylus',
 ].map(checkDependency).some(installed => !installed);
 if (missingDeps) {
     logger.error('Please install the missing dependencies from the root directory of your Hexo site.');

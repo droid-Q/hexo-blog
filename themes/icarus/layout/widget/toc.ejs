@@ -1,4 +1,5 @@
-<% function buildToc(toc) {
+<% if (get_config('toc') === true && (post.layout === 'page' || post.layout === 'post')) {
+function buildToc(toc) {
     let result = '';
     if (toc.hasOwnProperty('id') && toc.hasOwnProperty('index') && toc.hasOwnProperty('text')) {
         result += `<li>
@@ -23,16 +24,17 @@
         result += '</li>';
     }
     return result;
-} %>
-<% let tocContent = buildToc(_toc(content)); if (tocContent !== undefined && tocContent !== ''){ %>
-    <div class="card widget" id="toc">
-        <div class="card-content">
-            <div class="menu">
-                <h3 class="menu-label">
-                    <%= _p('widget.catalogue', Infinity) %>
-                </h3>
-                <%- tocContent %>
-            </div>
+}
+%>
+<!--<div class="card widget" id="toc">-->
+<div class="card widget column-left is-sticky" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                <%= _p('widget.catalogue', Infinity) %>
+            </h3>
+            <%- buildToc(_toc(post.content)) %>
         </div>
     </div>
+</div>
 <% } %>
