@@ -54,10 +54,8 @@ $(document).ready(function () {
         if (lastState !== null && isStateEquals(lastState, state)) {
             return;
         }
-
         $button.attr('class', state.classname);
-        // for (let prop in state) { thank
-        for (var prop in state) {
+        for (let prop in state) {
             if (prop === 'classname') {
                 continue;
             }

@@ -30,12 +30,8 @@ module.exports = function (hexo) {
                 return defaultValue;
             } else {
                 const property = readProperty(specs, configName);
-                // return property === null ? null : property[descriptors.defaultValue];
-                // update by thank: 默认就开启文章目录, 不用每个md文件都去写`toc: true`
-                const result = property === null ? null : property[descriptors.defaultValue];
-                return (configName === 'toc' && this.page.layout === 'post' && result === null) ? true : result;
+                return property === null ? null : property[descriptors.defaultValue];
             }
-
         }
         return value;
     });
