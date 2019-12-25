@@ -3,7 +3,7 @@
 
 
 # Version of the Icarus theme that is currently used
-version: 2.7.0
+version: 2.6.0
 # Path or URL to the website's icon
 favicon: /images/favicon.svg
 # Path or URL to RSS atom.xml
@@ -57,7 +57,13 @@ footer:
 article:
     # Code highlight theme
     # https://github.com/highlightjs/highlight.js/tree/master/src/styles
-    highlight: atom-one-dark
+    highlight: # Code highlight themes
+        # https://github.com/highlightjs/highlight.js/tree/master/src/styles
+        theme: atom-one-light
+        # Show code copying button
+        clipboard: true
+        # Default folding status of the code blocks. Can be "", "folded", "unfolded"
+        fold: unfolded
 #    highlight: atom-one-light
     # Whether to show article thumbnail images
     thumbnail: true
@@ -70,7 +76,7 @@ search:
     # Name of the search plugin
     type: insight
 
-	
+    
 # Comment plugin settings
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Comment-Plugins
 comment:
@@ -80,7 +86,7 @@ comment:
     app_key: wL0iIelU4SNNyv1gnVGTq34H       # (required) LeanCloud application key
     notify: false           # (optional) receive email notification
     verify: false           # (optional) show verification code
-    placeholder: Just go go, 支持Markdown~   # (optional) comment box placeholder text	
+    placeholder: Just go go, 支持Markdown~   # (optional) comment box placeholder text    
     guest_info: nick,mail,link,zhangsan 
     pageSize: 10
 
