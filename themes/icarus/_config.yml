@@ -12,7 +12,7 @@ rss:
 #logo: /images/maotouying.svg
 logo:
     text: Droid
-    img: /images/gujiaqi.jpg
+    img: /images/favicon.svg
 # Open Graph metadata
 # https://hexo.io/docs/helpers.html#open-graph
 open_graph:
