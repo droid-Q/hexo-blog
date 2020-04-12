@@ -13,7 +13,7 @@ const { cacheComponent } = require('hexo-component-inferno/lib/util/cache');
  *     title="******"
  *     qrcode="/path/to/qrcode" />
  */
-class Bitcoin extends Component {
+class bitcoin extends Component {
     render() {
         const { title, qrcode } = this.props;
         if (!qrcode) {
@@ -44,7 +44,7 @@ class Bitcoin extends Component {
  *     donate={{ type: 'alipay', qrcode='******' }}
  *     helper={{ __: function() {...} }} />
  */
-Bitcoin.Cacheable = cacheComponent(Bitcoin, 'donate.bitcoin', props => {
+bitcoin.Cacheable = cacheComponent(bitcoin, 'donate.bitcoin', props => {
     const { donate, helper } = props;
 
     return {
@@ -53,4 +53,4 @@ Bitcoin.Cacheable = cacheComponent(Bitcoin, 'donate.bitcoin', props => {
     };
 });
 
-module.exports = Bitcoin;
+module.exports = bitcoin;
