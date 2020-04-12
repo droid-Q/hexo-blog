@@ -12,7 +12,6 @@ before_install:
 install:
   - npm install
   - npm install hexo-deployer-git --save
-  - npm install --save bulma-stylus@0.8.0 hexo-renderer-inferno@^0.1.3 hexo-component-inferno@^0.2.3
 
 script:
   - hexo clean
