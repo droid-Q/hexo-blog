@@ -21,7 +21,11 @@ public class FixUrlEncodingFilter implements GlobalFilter, Ordered {
     }};
     @Override
     public Mono<Void> filter(final ServerWebExchange exchange, final GatewayFilterChain chain) {
-        final URI uri = alreadyEncodedUri(exchange);
+        URI uri = exchange.getRequest().getURI();
+        boolean encoded = containsEncodedParts(uri);
+        if (!encoded) {
+            uri = alreadyEncodedUri(exchange);
+        }
         return chain.filter(exchange.mutate().request(exchange.getRequest().mutate().uri(uri).build()).build());
     }
 
