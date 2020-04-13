@@ -257,14 +257,14 @@ widgets:
         # Feedburner ID
         feedburner_id: ''
     # Google AdSense unit configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: adsense
-        # AdSense client ID
-        client_id: 'ca-pub-9510380593849709'
-        # AdSense AD unit ID
-        slot_id: 'gujiaqi'
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: adsense
+    #     # AdSense client ID
+    #     client_id: 'ca-pub-9510380593849709'
+    #     # AdSense AD unit ID
+    #     slot_id: 'gujiaqi'
 # Plugin configurations
 plugins:
     # Enable page startup animations
