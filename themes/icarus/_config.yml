@@ -152,6 +152,11 @@ donates:
         type: ethereum
         # Qrcode image URL
         qrcode: 'https://raw.githubusercontent.com/droid-Q/PicGo/master/20200412224827.jpg'
+    -
+        # Donation entry name
+        type: buymeacoffee
+        # Qrcode image URL
+        url: 'https://www.buymeacoffee.com/DJQClvH'
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
 share:
