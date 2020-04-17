@@ -12,6 +12,7 @@ before_install:
 install:
   - npm install
   - npm install hexo-deployer-git --save
+  - npm install --save hexo-component-inferno@^0.2.4
 
 script:
   - hexo clean
