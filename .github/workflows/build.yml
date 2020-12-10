@@ -1,0 +1,31 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install hexo-cli -g
+    - run: npm install
+    - run: npm install hexo-deployer-git --save
+    - run: hexo clean
+    - run: hexo g
+    - run: git config --global user.name "droid-Q"
+    - run: git config --global user.email "droidqw@gmail.com"
+    - run: git clone https://github.com/droid-Q/droid-Q.github.io.git .deploy_git
+    - run: cd .deploy_git
+    - run: git checkout master
+    - run: cd ../
+    - run: sed -i "s/ci_token/${{secrets.SECRET_TOKEN}}/g" ./_config.yml
+    - run: hexo deploy
+      env:
+        CI: true
