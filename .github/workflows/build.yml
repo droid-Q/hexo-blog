@@ -24,7 +24,7 @@ jobs:
     - run: git clone https://github.com/droid-Q/droid-Q.github.io.git .deploy_git
     - run: cd .deploy_git
     - run: git checkout master
-    - run: git git submodule update --init --recursive
+    - run: git submodule update --init --recursive
     - run: cd ../
     - run: sed -i "s/ci_token/${{secrets.SECRET_TOKEN}}/g" ./_config.yml
     - run: hexo deploy
