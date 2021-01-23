@@ -133,9 +133,6 @@ widgets:
         type: subscribe_email
         description: 
         feedburner_id: ''
-auto_excerpt:
-    enable: true
-    lines: 5
 plugins:
     animejs: true
     back_to_top: true

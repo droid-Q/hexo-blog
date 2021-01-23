@@ -11,7 +11,7 @@ date: 2020-04-09 16:08:24
 [spring gateway issues](https://github.com/spring-cloud/spring-cloud-gateway/issues/1394)
 
 spring gateway 转发业务系统请求时遇到了url encoded again的问题，将work around 放到filter order 最后一个
-
+<!--more-->
 work around：
 ```java
 public class FixUrlEncodingFilter implements GlobalFilter, Ordered {
@@ -81,4 +81,3 @@ public class FixUrlEncodingFilter implements GlobalFilter, Ordered {
     }
 }
 ```
-<!--more-->
