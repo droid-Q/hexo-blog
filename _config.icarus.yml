@@ -66,16 +66,16 @@ comment:
 donates:
     -
         type: alipay
-        qrcode: 'https://raw.githubusercontent.com/droid-Q/PicGo/master/20200412224726.jpg'
+        qrcode: 'https://raw.githubusercontent.com/droid-Q/uPic/master/1611301339895.jpg'
     -
         type: wechat
-        qrcode: 'https://raw.githubusercontent.com/droid-Q/PicGo/master/20200412224846.jpg'
+        qrcode: 'https://raw.githubusercontent.com/droid-Q/uPic/master/1611301332786.jpg'
     -
         type: bitcoin
-        qrcode: 'https://raw.githubusercontent.com/droid-Q/PicGo/master/20200412224802.jpg'
+        qrcode: 'https://raw.githubusercontent.com/droid-Q/uPic/master/1611301337318.jpg'
     -
         type: ethereum
-        qrcode: 'https://raw.githubusercontent.com/droid-Q/PicGo/master/20200412224827.jpg'
+        qrcode: 'https://raw.githubusercontent.com/droid-Q/uPic/master/1611301335263.jpg'
     -
         type: buymeacoffee
         url: 'https://www.buymeacoffee.com/DJQClvH'
