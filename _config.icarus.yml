@@ -50,7 +50,7 @@ article:
     highlight:
         theme: atom-one-light
         clipboard: true
-        fold: unfolded
+        fold: folded
     readtime: true
 search:
     type: insight
