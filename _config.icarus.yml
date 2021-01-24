@@ -94,7 +94,7 @@ widgets:
         author_title: Programming Enthusiast
         location: 'Jiaxing, China'
         avatar: 
-        avatar_rounded: false
+        avatar_rounded: true
         gravatar: droidqw@gmail.com
         follow_link: 'https://github.com/droid-Q'
         social_links:
