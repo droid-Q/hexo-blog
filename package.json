@@ -10,7 +10,7 @@
     "cheerio": "^1.0.0-rc.3",
     "hexo": "^6.0.0",
     "hexo-admin": "^2.3.0",
-    "hexo-component-inferno": "^1.0.2",
+    "hexo-component-inferno": "^2.0.0",
     "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
